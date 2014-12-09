@@ -1,0 +1,462 @@
+2008-02-01 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Add DEBUG messages.
+- Fix:Using host name and sender address family on host list searching.
+- Fix:Set sender address on cannot convert sockaddr_storage structure.
+
+2008-01-29 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Add local API isSameSockAddressFamily,HideFromAddr,HideFromAllAddr.
+- Update:Add DEBUG messages.
+- Update:Almost can hide.
+- FixMe:Host was show in a moment,when push update button in hide target host.
+
+2008-01-03 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Fix:HostList "operator=" was leak locking to other list.
+- Fix:Network start check leaked.
+- Fix:Comment typo.
+- Update:Add skulk hosts check with login.
+- Update:Add private API SkulkFromHost.
+- Update:Add API GetSkulkHost.
+
+2008-01-03 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Fix:Unlock leak.
+- Update:Add APIs for IP Address string interface.
+- Update:Skulk host list was changes "vector<struct sockaddr_strage>" to ipmsg::HostList.
+- Update:Implementation some APIs.
+
+2007-12-31 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Fix:Debug message typo.
+- Fix:No delete host before AddHost on ChangeAbsenceMode.
+- Update:Add APIs ClearSkulkHost,DeleteSkulkHost and AddSkulkHost.
+- Update:Add DEBUG messages on Raise events.
+
+2007-12-05 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Fix:Compile error with DEBUG option.
+- Update:Raise event on GetPubKey packet recieved.
+
+2007-11-24 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Add debug message.
+- Update:Add debug method.
+- Update:Add some events,EventBefore,EventAfter.for example usage,GUI Lock/Unlock events.
+- Fix:Absence mode initializing.
+
+2007-11-19 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Fix:Recived messege including attach file information.
+- Fix:Download from localhost.
+
+2007-11-18 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Fix:http://www.linuxsir.org/bbs/showthread.php?t=316266
+- Fix:Change API Name RefreashHostListAfter to RefreshHostListAfter.
+- Update:Change API Name NetworkStarted to IsNetworkStarted.
+- Update:Some RecvPacket call deleted.
+- Update:Respond multithread.
+
+2007-08-30 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Support IPMSG_RELEASEFILE.
+
+2007-08-22 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:define WINCOMPAT else case.
+- Fix:IPMSG_GETLIST option(start position).
+- Fix:Next start position in IPMSG_ANSLIST.
+
+2007-08-15 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:SendMsg API's boolean value changes to class.
+
+2007-08-13 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Fix:Rollback Compare method to 0.1.4.
+- Fix:Change method checking hardware addressin AddHost method.
+
+2007-08-11 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Change some debug messages.
+
+2007-08-10 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Change some debug messages.
+- Fix:Change IsAsking property's default value(true->false).
+- Fix:Compare() returns 0 to CompareHardwareAddress's return value.CompareHardwareAddress() returns Compare's return value to 0.
+
+2007-08-08 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Change some debug messages.
+
+2007-07-31 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:sd_is_broadcast deleted.
+- Update:Delete comment block.
+- Update:Delete IFR_MAX
+- Update:Delete Debug print.
+- Update:CompareHardwareAddress() returns 0 to Compare's return value.
+
+2007-07-29 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Fix:Discard useIPv6 as not defaukt in IpMessengerAgentImpl::GetNetworkInterfaceInfo.
+- Fix:Discard useIPv6 as not defaukt in IpMessengerAgent::GetNetworkInterfaceInfo.
+
+2007-07-25 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Set default device name on get ARP table.
+- Update:Sort appearanceHostList with hostList.
+- Fix:Change event parameter, Change as hostList to appearanceHostList(UpdateHostListAfter,RefreashHostListAfter).
+
+2007-07-20 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Fix:Event notify duplicate event twice(Change checking IPAddress to HardwareAddress).
+- Update:Add return value in public API(AddHost).
+- Update:Add return value in private API(AddHostListFromPacket).
+- Update:Check with raise event on added host list count.
+- Update:Change event parameter, Change as hostList to appearanceHostList.
+
+2007-07-19 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Add parameter isPermitSameHardwareAddress in AddHost API.
+- Fix:AddressFamily on HostListItem.
+- Fix:Delete Debug print.
+- Update:Change Debug print.
+- Update:Add class variable sd_address_family and search host with address family.
+- Update:Add some parameter checks.
+- Update:Delete some comment blocks.
+
+2007-07-17 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Add private variable,It is appearance host list.
+- Update:GetHostList returns appearance host list.Because host added twice on host list.
+- Update:Add private API.(Compare hardware address)
+
+2007-07-15 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Fix:Fix some small bugs.
+- Fix:Fix some comments.
+- Update:Add broadcast socket map.
+- Fix:Compile error happened,when Building on Solaris.
+
+2007-07-05 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Move platform depends "define" statements.
+- Update:Comments for debug print.
+
+2007-07-03 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Add debug print.
+- Update:Delete inet_ntop,inet_pton API.
+- Fix:Quick hack for Linux and BSD API difference.
+
+2007-07-02 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Add IpAddress accessor in HostListItem(Add getting hardware address).
+- Update:Add print supported protocol in IpMessengerAgent.
+- Update:Add method for getting build option in IpMessengerAgent.
+- Update:Add DeviceName setter in NetworkInterface.
+- Update:Add property HardwareAddress in NetworkInterface.
+- Update:Add property HardwareAddress in HostListItem.
+- Fix:haveIPv6 and haveIPv4 variable setting on specify external NIC.
+- Update:Change perror information.
+- Update:Add internal API "getNetworkInterfaceMacAddress".
+- Update:Add internal API "convertMacAddressToBuffer".
+- Update:Add internal API "convertIpAddressToMacAddress".
+
+2007-06-20 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Add UdpSocket property in Packet class.
+- Update:Add udp_socket parameter in UdpRecv private API.
+- Update:Add send_socket parameter in UdpSendto private API.
+- Update:Add udp_socket parameter in SendPacket private API.
+- Update:UdpSendto check Scope ID, if not specified IPv6 socket descriptor(-1).
+- Update:UdpSendto use send_socket,if specified  IPv6 socket descriptor.
+- Update:setScopeId deleted.
+- Update:Add some debug print.
+- Update:getScopeId API returns -1 at using IPv4.
+- Update:Local loopback NIC without NIC List.
+- Update:Add #ifdef statement.
+
+2007-06-17 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Check IP address difference by binary.
+- Update:Change API name(Get->get).
+- Update:Add option --enable-debug.
+- Update:Add some debug private API.
+- Update:Add getLocalHostAddress private API.
+- Update:Add some debug print.
+- Update:Change using inet_ntop -> getnameinfo.
+- Update:Add #ifdef ENABLE_IPV6
+
+2007-06-10 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Add private API(setScopeId).
+- Update:Add some debug messages.
+- Update:Change isSameNetwork(strictly judgement)
+- Update:Duplicate logic was deleted.(GetNetworkInterfaceInfo).
+- Update:Delete "const" from UdpSendto parameter.
+- Update:Add hostListBackup.
+- Update:using backup on host list create.
+- Update:Raise event on encryption failed.
+
+2007-06-09 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:6th step for IPv6.
+- Update:Add some debug messages.
+- Update:Add Trace Macros.
+
+2007-05-31 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:5th step for IPv6.
+
+2007-05-27 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Third step for IPv6.
+- Update:4th step for IPv6.
+
+2007-05-20 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:First step for IPv6.
+- Update:Second step for IPv6.
+
+2007-02-24 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Fix:Public key get only host list update.
+
+2007-02-06 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:ABI changed.(SendMsg return boolean).
+
+2007-02-05 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Fix:Broadcast only specified network and NIC belong networks.(without 255.255.255.255)
+- Fix:warnings.
+- Fix:Move OS depending code to PrivateUtils.cpp from AttachFile.cpp.
+- Fix:ipmsg namespace.
+- Fix:(bug)Broadcast to different network.
+- Update:Cleanup codes.
+
+2007-02-03 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Port for Sun Studio 11.
+- Update:Port for Solaris 10.
+
+2007-02-02 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Fix:Change check library for EVP API,-lssl to -lcrypt
+- Update:delete using namespace std,for Solaris10 for x86 compile error.
+- Update:Add __sun ifdef MACRO.
+- Update:Delete inet_ntoa_init.
+- Update:Obsolate in_addr_t,now using struct in_addr.
+- Update:Obsolate inet_ntoa_r,now using inet_ntop.
+- Update:Obsolate inet_addr,now using inet_pton.
+
+2007-01-31 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Support PDP Endian,Big Endian(Experimental).
+
+2007-01-30 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:NetworkInterface's Property automaticaly caluclation as networkaddress,bradcast address.
+
+2007-01-29 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Arrangement codes.
+- Update:Minimize use snprintf.
+- Update:Apply self review result.
+
+2007-01-28 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Support sendfile system call in SendFile method.
+
+2007-01-27 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Enabled ExitAfter event.
+
+2007-01-26 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Delete API(DeleteHost).
+- Update:Add API(DeleteHostByAddress).
+- Update:Add Event(RefreashHostListAfter).
+- Update:Change parameter hostList to host at Event EntryAfter.
+- Update:Change parameter hostList to host at Event ExitAfter.
+- Update:Change parameter hostList to host at Event AbsenceModeChangeAfter.
+- Update:Change raise event timings.
+- Update:Change debug print.
+
+2007-01-20 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- New upstream release.(0.1.2)
+
+2007-01-18 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:ipmsg name space was introduced.(for 0.1.3)
+- Fix:Comment.(for 0.1.2)
+- Fix:Doxygen comment style.(for 0.1.2)
+
+2007-01-16 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Fix:Comment.
+- Fix:Doxygen comment style.
+
+2007-01-11 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Fix:Replace thread unsafe function to thread safe function.(readdir,getenv,ctime...)
+- Update:Change ifdef on debug for locking.
+- Update:Arrangement configure.ac(compile options).
+- Update:Add libtool revision control.
+
+2007-01-10 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Fix:Replace thread unsafe function to thread safe function.(readdir,getenv,ctime...)
+- Fix:Change lock sequence.
+- Update:Change debug print.
+- Update:Add include <limits.h>.
+
+2007-01-09 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Append debug print.
+- Update:Add common method(UdpSendto).
+- Fix:IP address is strange on host list,when looking from other network.
+
+2007-01-08 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Replace 100 to IPV4_ADDRESS_MAX_SIZE.
+- Update:Add IPV4_ADDRESS_MAX_SIZE.
+- Update:Check size on sort.
+- Update:Change PROPERTY MACRO.
+- Update:Chenge Ip address checking by string to by in_addr_t.
+
+2007-01-07 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:AddHost without broadcast and network address.
+- Update:Append debug print.
+- Update:Add Broadcast address to NetworkInterface.
+- Fix:Doxygen comments.
+- Fix:Unicast packet unreachable on NAT environment.
+- Fix:forget ntohs.
+- Fix:Delete duplicate code.
+
+2007-01-06 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Commented printf.
+- Update:Add copy constructor.
+- Update:Add operator=.
+- Update:Change thread safe normal readonly methods to const.
+- Update:Lock/Unlock change function to method.
+- Update:Change Parameter,copy to reference.
+- Update:Some functions move header to source.
+
+2007-01-05 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Delete #ifdef HAVE_PTHREAD.
+- Update:Add StartNetwork, StopNetwork API.
+- Update:Change NIC info get method.
+- Update:Add IpMsgMutex*.
+- Update:Change pthread_mutex_* to IpMsgMutex*.
+- Fix:Comments.
+
+2007-01-02 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Add parameter nics.
+- Fix:Broadcast address don't use FQDN.
+
+2007-01-01 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Fix:Warnings.
+- Update:Add no logging parameter.
+- Update:Source code arrangement.
+
+2006-12-31 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Thread safe.
+- Update:Parameter object copy to const reference.
+- Update:include config.h in PrivateUtils.cpp.
+
+2006-12-29 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- New upstream release.(0.1.1)
+
+2006-12-28 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Delete DEBUG print.
+- Fix:Buffer overflow.
+- Fix:Getting local file information by stat.
+- Fix:Show buffer size in DEBUG API.
+- Fix:Change condition for size of option buffer checking.
+- Fix:Change timing OpenAfter event.
+- Fix:Change format string,"%.2Lf B" to "%lld B" in getUnitSizeString.
+
+2006-12-27 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Change GetGroupList API.
+
+2006-12-26 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Change perror arguments("mkdir"->"mkdir(1)","mkdir(2)").
+- Update:Add Processing property to DownloadInfo class.
+- Update:Add timing of DownloadProcessing event to download end before.
+- Fix:Raise event on decrypt error.
+- Fix:IsLocalHost API's NIC range.
+
+2006-12-25 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Add IsLocalHost() API.
+- Fix:Add DEBUG printf after fflush(stdout).
+
+2006-12-24 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Add QueryVersionInfo API.
+- Update:Add QueryAbsenceInfo API.
+- Update:Add AbsenceDetailRecieveAfter event.
+- Update:Add VersionInfoRecieveAfter event.
+- Update:Add to checking parameter for SendFile.(modified time, file size).
+- Update:Change to file checking method,fstat to stat.
+- Fix:AttachedFile list parsing bug.
+- Fix:AbsenceModeChangeAfter event's timing.
+- Fix:"Not Absence mode" returns in absence mode.
+
+2006-12-22 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Get Host List Retry Error Implementation.
+- Update:Add AbsenceModeChangeAfter event.
+- Fix:Packet unique check.
+- Fix:SEGV happend.Use missing erase method with vector.
+- Fix:inet_ntoa is thread unsafe function.implement inet_ntoa_r.
+- Fix:Host list item's IP address was local loopback address,In this case,Set packet sender IP address.
+- Fix:Send Retry Error condition miss,case of continue.
+
+2006-12-21 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Send Retry Error Implimentation.
+- Fix:Check for Interapt with select system call.
+
+2006-12-20 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:HostList dump helper method in PrivateUtils.cpp moved from IpMessengerImpl.cpp.
+- Fix:Host list trancated at Host list creating.
+- Fix:Other host's group name empty at login.
+- Fix:Common Option.
+
+2006-12-19 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Add Sorting API.
+- Fix:Some comment typo.
+- Fix:Absence mode Common option.
+- Fix:GetMaxOptionBufferSize API returns minus value.
+
+2006-12-17 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Some API Change.
+- Update:Source file sepearated.(Encrypt,Decrypt)
+
+2006-12-14 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Fix:Login Name Empty.
+
+2006-12-13 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Implemented Download events.
+- Update:Add parameters(DownloadInfo &info, void *data) to All Download events.
+- Fix:Version information.
+- Update:Add API( IsEncryptSupport, IsAttachFileSupport, IsAbsence )
+
+2006-12-11 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Fix:Implementation missing,All Download events.
+
+2006-12-10 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Add to host list on AnsEntry.
+- Update:Add Debug infomation in Send* method.
+- Update:Change condition ot adding default host.
+- Update:Change method of show Packet dump,And movd at PrivateUtil.cpp.
+- Update:Send common command option.(with Capacity)
+- Update:Add FindHostByHostName method.
+- Update:Add AddHostListFromPacket method.
+- Update:Delete UpdateHostList from Login method.
+- Update:Can't trust recvfrom system call's "from" parameter on NAT environment,So using HostList's IP address.
+- Update:Send Broadcast myself.
+- Update:Entry first NIC's IP address in Host List.
+- Fix:version information
+- Fix:Broadcast can't recieve packets.
+- Fix:Warnings.
+- Fix:Property Bug.
+- Update:Change RecieveAfter event return type, void to bool.return true as Message processed, not save.
+
+2006-12-07 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Dialup option support in SendBroadcast method, and add dialup property.
+
+2006-12-06 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Update:Interface class(IpMessengerAgent) / Implimentation
+         class(IpMessengerAgentImpl) Separated.
+         and Add some source file(IpMessengerImpl.cpp IpMessengerImpl.h).
+
+2006-12-01 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Fix:Buffer overflow in AnsHostList packet.
+- Update:Append "GetMaxOptionBufferSize" API,It return Option buffer size.
+         This API is private, enable to use friend classes.
+
+2006-11-29 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Fix:Multiple NIC support.
+- Fix:Can't show my host.
+- Fix:Add My host to hostlist as default,when if hostlist size is zero.
+
+2006-11-23 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Add sent/recieved message save flag.
+
+2006-11-18 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Initial release.(0.1.1)
+
+2006-11-14 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- IpMessenger.cpp separated 6 sources.
+      ->AttachFile.cpp
+      ->HostList.cpp
+      ->IpMessenger.cpp
+      ->PrivateUtils.cpp
+      ->RecievedMessage.cpp
+      ->SentMessage.cpp
+
+2006-11-10 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- initial upload sourceforge.jp.
+
+2006-11-08 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- using automake and libtool.
+
+2006-09-05 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- prototype crypto version implementaion end.
+
+2006-08-07 Niki, Kuninobu <nikikuni@yahoo.co.jp>
+- Prototype version implementation started.
